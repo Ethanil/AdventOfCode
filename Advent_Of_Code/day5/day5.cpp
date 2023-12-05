@@ -152,30 +152,23 @@ namespace day5 {
 			fillMap(maps[i], in);
 		}
 		long long minimum = std::numeric_limits<long long>::max();
-		for (const auto & seed : seeds) {
-			//std::vector<ValueRange>* valueRanges = new std::vector<ValueRange>{seed};
+		for (const auto& seed : seeds) {
 			std::vector<ValueRange> valueRanges = { seed };
-			//valueRanges->emplace_back( seed );
 			for (int i = 0; i < 7; ++i) {
-				//std::vector<ValueRange>* nextValueRanges = new std::vector<ValueRange>{};
 				std::vector<ValueRange> nextValueRanges;
-				//for (const auto& valueRange : *valueRanges) {
 				for (const auto& valueRange : valueRanges) {
 					auto ranges = maps[i].convertRange(valueRange);
 					for (const auto& range : ranges) {
-						//nextValueRanges->emplace_back(range);
 						nextValueRanges.emplace_back(range);
 					}
 				}
-				valueRanges = nextValueRanges;
+				valueRanges = std::move(nextValueRanges);
 			}
-			//for (const auto& valueRange : *valueRanges) {
 			for (const auto& valueRange : valueRanges) {
 				minimum = std::min(minimum, valueRange.startNumber);
 			}
 		}
 		return minimum;
-		return -1;
 	}
 
 }
