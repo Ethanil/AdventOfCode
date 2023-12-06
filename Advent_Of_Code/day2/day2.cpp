@@ -1,4 +1,3 @@
-#include "day2.hpp"
 #include <iostream>
 #include <fstream>
 #include <string>

@@ -151,6 +151,7 @@ namespace day5 {
 		for (int i = 0; i < 7; ++i) {
 			fillMap(maps[i], in);
 		}
+
 		long long minimum = std::numeric_limits<long long>::max();
 		for (const auto& seed : seeds) {
 			std::vector<ValueRange> valueRanges = { seed };
