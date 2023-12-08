@@ -37,7 +37,7 @@ namespace day2 {
 		return true;
 	}
 
-	int calc1(const char* filename) {
+	long long calc1(const char* filename) {
 		std::ifstream in(filename);
 		std::string line;
 		int gameNumber = 1;
@@ -98,7 +98,7 @@ namespace day2 {
 				i += 3;
 				break;
 			case ';':
-				std::cout << cubes<< "\n";
+				//std::cout << cubes<< "\n";
 				result.merge(cubes,&std::max);
 				cubes={ 0,0,0 };
 				break;
@@ -107,12 +107,12 @@ namespace day2 {
 				break;
 			}
 		}
-		std::cout << cubes << "\n";
+		//std::cout << cubes << "\n";
 		result.merge(cubes, &std::max);
 		return result;
 	}
 
-	int calc2(const char* filename) {
+	long long calc2(const char* filename) {
 		std::ifstream in(filename);
 		std::string line;
 		int sum = 0;
@@ -121,4 +121,6 @@ namespace day2 {
 		}
 		return sum;
 	}
+	long long calc3(const char* filename) { return -1; }
+	long long calc4(const char* filename) { return -1; }
 }

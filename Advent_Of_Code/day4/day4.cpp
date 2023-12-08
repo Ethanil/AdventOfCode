@@ -23,6 +23,7 @@ namespace day4 {
 		os << "}";
 		return os;
 	}
+	long long calc1(const char* filename);
 	//int calc1(const char* filename) {
 	//	std::ifstream in(filename);
 	//	int c;
@@ -87,7 +88,7 @@ namespace day4 {
 	//	}
 	//	return cardsToPlay.size();
 	//}
-	int calc2(const char* filename) { 
+	long long calc2(const char* filename) {
 		std::ifstream in(filename);
 		int c;
 		int cardNumber = 0;
@@ -147,7 +148,7 @@ namespace day4 {
 		return points;
 	}
 
-	int calc3(const char* filename) {
+	long long calc3(const char* filename) {
 		std::ifstream in(filename);
 		std::string line;
 		Card cards[NUMBER_OF_CARDS];
@@ -187,7 +188,7 @@ namespace day4 {
 		}
 		return points;
 	}
-	int calc4(const char* filename) {
+	long long calc4(const char* filename) {
 		std::ifstream in(filename);
 		int c;
 		

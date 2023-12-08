@@ -1,4 +1,4 @@
-namespace day4 {
+namespace day8 {
 	long long calc1(const char* filename);
 	long long calc2(const char* filename);
 	long long calc3(const char* filename);

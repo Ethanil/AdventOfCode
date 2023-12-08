@@ -106,4 +106,6 @@ namespace day6 {
 		TwoHoldTimes hTime = calculateHoldTimeFromDistance(race.time, race.distance);
 		return hTime.HighBorder - hTime.lowBorder;
 	}
+	long long calc3(const char* fileName) { return -1; }
+	long long calc4(const char* fileName) { return -1; }
 }

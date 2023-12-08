@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 namespace day1 {
-	int calc(const char* file) {
+	long long calc1(const char* file) {
 		std::ifstream infile(file);
 		std::string line;
 		int sum = 0;
@@ -54,11 +54,14 @@ namespace day1 {
 				}
 			}
 			sum += firstDigitInLine * 10 + lastDigitInLine;
-			std::cout << lineNumber << ": " << firstDigitInLine * 10 + lastDigitInLine << " : "<<sum << "\n";
+			//std::cout << lineNumber << ": " << firstDigitInLine * 10 + lastDigitInLine << " : "<<sum << "\n";
 			lineNumber++;
 			firstDigitOccuredAt = std::string::npos;
 			lastDigitOccuredAt = std::string::npos;
 		}
 		return sum;
 	}
+	long long calc2(const char* filename) { return -1; }
+	long long calc3(const char* filename) { return -1; }
+	long long calc4(const char* filename) { return -1; }
 }

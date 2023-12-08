@@ -171,5 +171,6 @@ namespace day5 {
 		}
 		return minimum;
 	}
-
+	long long calc3(const char* fileName) { return -1; }
+	long long calc4(const char* fileName) { return -1; }
 }

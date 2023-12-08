@@ -104,7 +104,7 @@ namespace day3 {
 		return sum;
 	}
 
-	int calc1(const char* filename) {
+	long long calc1(const char* filename) {
 		return checkSubstring1(filename);
 	}
 	int checkSubstring2(const char* filename) {
@@ -225,7 +225,10 @@ namespace day3 {
 		return sum;
 	}
 
-	int calc2(const char* filename) {
+	long long calc2(const char* filename) {
 		return checkSubstring2(filename);
 	}
+
+	long long calc3(const char* filename) { return -1; }
+	long long calc4(const char* filename) { return -1; }
 }
