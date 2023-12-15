@@ -10,6 +10,13 @@
 #include "day6/day6.hpp"
 #include "day7/day7.hpp"
 #include "day8/day8.hpp"
+#include "day9/day9.hpp"
+#include "day10/day10.hpp"
+#include "day11/day11.hpp"
+#include "day12/day12.hpp"
+#include "day13/day13.hpp"
+#include "day14/day14.hpp"
+#include "day15/day15.hpp"
 double getTime(long long (*func)(const char*), const char* filename, int times = 10000) {
 	double sum = 0;
 	for (int i = 0; i < times; ++i) {
@@ -20,17 +27,19 @@ double getTime(long long (*func)(const char*), const char* filename, int times =
 	}
 	return sum / times;
 }
-void timeCode() {
-	int day = 3;
-	using namespace day3;
-	auto filename = std::format("day{}/day{}.txt", day, day);
-	std::cout << "calc1: " << getTime(calc1, filename.c_str()) << " microseconds\n";
-	std::cout << "calc2: " << getTime(calc2, filename.c_str()) << " microseconds\n";
-	std::cout << "calc3: " << getTime(calc3, filename.c_str()) << " microseconds\n";
-	std::cout << "calc4: " << getTime(calc4, filename.c_str()) << " microseconds\n";
+void timeCode(int day, const char* filename) {
+	using namespace day15;
+	std::cout << "calc1: " << getTime(calc1, filename) << " microseconds\n";
+	std::cout << "calc2: " << getTime(calc2, filename) << " microseconds\n";
+	std::cout << "calc3: " << getTime(calc3, filename) << " microseconds\n";
+	std::cout << "calc4: " << getTime(calc4, filename) << " microseconds\n";
 }
 
+
 int main() {
-	timeCode();
-	//std::cout << day8::calc2("day8/day8.txt");
+	int day = 15;
+	using namespace day15;
+	auto filename = std::format("day{}/day{}.txt", day, day);
+	//std::cout << calc2(filename.c_str());
+	timeCode(day, filename.c_str());
 }
