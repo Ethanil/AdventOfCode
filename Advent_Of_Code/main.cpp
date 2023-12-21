@@ -18,7 +18,13 @@
 #include "day14/day14.hpp"
 #include "day15/day15.hpp"
 #include "day16/day16.hpp"
-double getTime(long long (*func)(const char*), const char* filename, int times = 100) {
+#include "day17/day17.hpp"
+#include "day18/day18.hpp"
+#include "day19/day19.hpp"
+#include "day20/day20.hpp"
+
+using namespace day17;
+double getTime(long long (*func)(const char*), const char* filename, int times = 1) {
 	double sum = 0;
 	for (int i = 0; i < times; ++i) {
 		auto start = std::chrono::high_resolution_clock::now();
@@ -29,18 +35,16 @@ double getTime(long long (*func)(const char*), const char* filename, int times =
 	return sum / times;
 }
 void timeCode(int day, const char* filename) {
-	using namespace day16;
 	std::cout << "calc1: " << getTime(calc1, filename) << " microseconds\n";
-	//std::cout << "calc2: " << getTime(calc2, filename) << " microseconds\n";
+	std::cout << "calc2: " << getTime(calc2, filename) << " microseconds\n";
 	std::cout << "calc3: " << getTime(calc3, filename) << " microseconds\n";
 	std::cout << "calc4: " << getTime(calc4, filename) << " microseconds\n";
 }
 
 
 int main() {
-	int day = 16;
-	using namespace day16;
+	int day = 17;
 	auto filename = std::format("day{}/day{}.txt", day, day);
-	//std::cout << calc3(filename.c_str());
+	//std::cout << calc2(filename.c_str());
 	timeCode(day, filename.c_str());
 }

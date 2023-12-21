@@ -87,7 +87,6 @@ namespace day15 {
 		FILE* stream;
 		int c;
 		fopen_s(&stream, filename, "r");
-		fopen_s(&stream, filename, "r");
 		for (int row = 0; row < NUMBER_OF_LINES; ++row) {
 			for (int column = 0; column < LINEWIDTH; ++column) {
 				c = _getc_nolock(stream);
@@ -102,7 +101,6 @@ namespace day15 {
 	long long calc4(const char* filename) {
 		FILE* stream;
 		int c;
-		fopen_s(&stream, filename, "r");
 		fopen_s(&stream, filename, "r");
 		for (int row = 0; row < NUMBER_OF_LINES; ++row) {
 			for (int column = 0; column < LINEWIDTH; ++column) {
